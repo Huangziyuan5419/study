@@ -61,3 +61,6 @@ class Model(dict, metaclass=ModelMetaclass):
         sql = 'insert into %s (%s) values (%s)' % (self.__table__, ','.join(fields), ','.join(params))
         print('SQL: %s' % sql)
         print('ARGS: %s' % str(args))
+        
+u = User(id=12345, name='Michael', email='test@orm.org', password='my-pwd')
+u.save()
